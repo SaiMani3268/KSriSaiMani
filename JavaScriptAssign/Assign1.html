@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>JavaScript</title>
+</head>
+<body>
+    <script lang="javascript">
+        // Q1
+        document.write(Number.isInteger(2)+"<br>");
+        //Q2
+        function add_all(arr){
+            var sum=0;
+            for(var i=0;i<arr.length;i++){
+                sum += arr[i];
+            }
+            document.write(sum +"<br>");
+        }
+        add_all([1+5+8+9+7]);
+        //Q3
+        function convert(f) {
+            var c,f;
+            c=(((f-32)/9)*5);
+            document.write(c+"<br>");
+        }
+        convert(98);
+        //Q4
+        function fact(n) {
+            var n;
+            var fact=1;
+            if(n==0 || n==1){
+                return fact;
+            }
+            else{
+                for(var i=n;i>1;i--){
+                    fact*=i;
+                }
+                return fact;
+            }
+        }
+        document.write(fact(6)+"<br>");
+        //Q5
+        function convert_to_coins(amount,coins) {
+            //1,2,5,10,25
+            if(amount === 0){
+                return [];
+            }
+            else{
+                if(amount >= coins[0]){
+                    var left = (amount - coins[0]);
+                    return [coins[0]].concat(convert_to_coins(left, coins));
+                }
+                else{
+                    coins.shift();
+                    return convert_to_coins(amount, coins);
+                }
+            }
+        }
+        document.write(convert_to_coins(87, [25,10,5,2,1]));
+
+    </script>
+</body>
+</html>

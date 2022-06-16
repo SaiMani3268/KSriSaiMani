@@ -1,0 +1,35 @@
+body{
+    text-align: center;
+    border: 100%;
+    border-style: ridge;
+    border-color: black;
+    padding-bottom: 2%;
+    padding-right: 2%;
+    padding-left: 2%;
+    width: 200px;
+    border-radius: 50px;
+}
+#heading{
+    text-align: center;
+    color: chartreuse;
+}
+#content{
+    margin: auto;
+    border-color:black;
+    border: 2px;
+    border-style: ridge;
+}
+button{
+    background-color:beige;
+    color: crimson;
+    margin: 2px;
+    border-radius: 10px;
+    border-style: none;
+    
+}
+button:hover{
+    background-color: cornflowerblue;
+}
+textarea:hover{
+    background-color: lightcyan;
+}
