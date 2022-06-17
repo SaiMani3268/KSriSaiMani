@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+        <script>
+            // Q1
+            var myarray = ["apple", "banana", "cherry", "dragonfruit"];
+            function findLongestString (arr){
+                var result = arr.reduce(function (longest, currentWord){
+                    return currentWord.length >longest.length ? currentWord : longest ;
+                }, "");
+                return result + " is the longest string";
+            }
+            console.log(findLongestString (myarray));
+
+            // Q2
+            var num_array = [1,2,3,4,5,6,7,8];
+            function sum_of_squares(arr) {
+                var sumofsquares = arr.reduce((sum,current) => sum + current ** 2,0);
+                return sumofsquares;
+            }
+            console.log(sum_of_squares(num_array));
+
+            //Q3
+            function iseven(num_array) {
+                return num_array%2==0;
+            }
+            var result = num_array.filter(iseven);
+            console.log(result);
+
+            // Q4->returning values those are not satisfing the filter criteria
+            var arr = [34,55,24,87,93,28];
+            function array_filtering(str,filter){
+                for(var i=0 ; i<=str.length ; i++) {
+                    if(filter(str[i])) {
+                        console.log(str[i]);
+                    }
+                }
+            }
+            function isodd(str) {
+                return !(str % 2 != 0);
+
+            }
+            console.log(array_filtering(arr,isodd) + " aren't satisfying filter criteria.");
+        </script>
+    </head>
+    <body>
+        
+    </body>
+    </body>
+</html>
