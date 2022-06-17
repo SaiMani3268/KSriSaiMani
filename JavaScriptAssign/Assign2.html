@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+        <script>
+            // Q1
+            function reverse(String) {
+                return String.split("").reverse().join("");
+            }
+            console.log(reverse("hello world!!!"));
+
+            // Q2
+            function comparator(a,b) {
+                return (a-b);
+            }
+            var myarray=[{radius:5},{radius:9},{radius:2}];
+            console.log(myarray.sort(comparator));
+
+            // Q3
+            var a1=[];
+            a1["0"]=1;
+            a1["1"]=2;
+            a1["3"]=9;
+            a1["10"]=20;
+            function length_of_array(arr) {
+                for (var i=0;i<arr.length;i++){
+                    console.log(arr[i]);
+                }
+            }
+            length_of_array(a1);
+            console.log("Number of elements = " + a1.length);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
