@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+        <script>
+            // Q1
+            function Rectangle(l , b) {
+                this.length = l;
+                this.breadth = b;
+                this.area = function() {return this.length * this.breadth;}
+                this.perimeter = function() {return 2 * (this.length + this.breadth);}
+            }
+            var o = new Rectangle(5 , 3);
+            console.log("Area of rectangle is = " + o.area());
+            console.log("Perimeter of rectangle is = " + o.perimeter());
+
+            // Q2
+            function distance(x , y) {
+                this.x = x;
+                this.y = y;
+                this.d = function(another) {return Math.sqrt(((x-another.x) ** 2) + ((y-another.y) ** 2));}
+            }
+            var p1 = new distance(12 , 10);
+            var p2 = new distance(6 , 5);
+            console.log(p1.d(p2));
+
+            // Q3
+            function isPalindrome(str) {
+                this.str = str;
+                this.str_rev = str.split("").reverse().join("");
+                this.isPalindrome = function() {
+                    if(this.str === this.str_rev){
+                       return "Yes";
+                    }
+                    else {
+                       return "No";
+                    }
+                }    
+            }
+            var string = new isPalindrome("madam");
+            console.log(string.isPalindrome());
+        </script>     
+    </head>
+    <body>
+        
+    </body>
+</html>
