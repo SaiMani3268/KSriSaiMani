@@ -1,7 +1,6 @@
 const express = require('express')
-
 const path = require('path')
-
+const hoganMiddleware = require('hogan-middleware')
 const app = express()
 
 app.set('views', path.join(__dirname, 'views'))
@@ -25,8 +24,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 // })
 
 const indexRouter = require('./routes/index')
-app.use('/', indexRouter)
 
+app.use('/', indexRouter)
 app.listen(3000)
 
 console.log('Server running on http://localhost:3000')
