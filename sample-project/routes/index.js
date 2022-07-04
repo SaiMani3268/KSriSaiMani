@@ -15,12 +15,14 @@ const profiles = {
   // },
   sjobs: {
     name: 'steve jobs',
+    username: 'sjobs',
     image: '/images/sjobs.jpg',
     company: 'apple',
     languages: ['objective-c', 'swift', 'c++']
   },
   bgates: {
     name: 'bill gates',
+    username: 'bgates',
     image: '/images/bgates.jpg',
     company: 'microsoft',
     languages: ['c', 'java', 'c#']
@@ -114,7 +116,7 @@ router.get('/:profile/:username', (req, res) => {
     })
     return
   }
-  
+
   currentprofile.timestamp = req.timestamp
   res.render('profile', currentprofile)
 })
