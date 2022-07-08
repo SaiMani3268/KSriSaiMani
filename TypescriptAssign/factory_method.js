@@ -1,33 +1,33 @@
 "use strict";
 exports.__esModule = true;
-exports.ProductFactory = exports.ConcreteProductB = exports.ConcreteProductA = void 0;
-var ConcreteProductA = /** @class */ (function () {
-    function ConcreteProductA() {
+exports.ProductFactory = exports.MethodB = exports.MethodA = void 0;
+var MethodA = /** @class */ (function () {
+    function MethodA() {
         this.method = function (param) {
-            return "Method of ConcreteProductA";
+            return "Method A";
         };
     }
-    return ConcreteProductA;
+    return MethodA;
 }());
-exports.ConcreteProductA = ConcreteProductA;
-var ConcreteProductB = /** @class */ (function () {
-    function ConcreteProductB() {
+exports.MethodA = MethodA;
+var MethodB = /** @class */ (function () {
+    function MethodB() {
         this.method = function (param) {
-            return "Method of ConcreteProductB";
+            return "Method B";
         };
     }
-    return ConcreteProductB;
+    return MethodB;
 }());
-exports.ConcreteProductB = ConcreteProductB;
+exports.MethodB = MethodB;
 var ProductFactory = /** @class */ (function () {
     function ProductFactory() {
     }
     ProductFactory.createProduct = function (type) {
         if (type === "A") {
-            return new ConcreteProductA();
+            return new MethodA();
         }
         else if (type === "B") {
-            return new ConcreteProductB();
+            return new MethodB();
         }
         return null;
     };
